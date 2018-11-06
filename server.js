@@ -47,6 +47,6 @@ app.get('/about', (req,res) => {
 app.get('/bad', (req,res) => {
     res.status(400).json({errormessage: 'bad request'})
 })
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('listening on port 3000')
 })
